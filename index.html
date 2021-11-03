@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space Cats</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .cardStyle {
+        background-color: #fff0; 
+        border: 1px solid #dee2e6;
+        color: #e9ecef;
+        margin-bottom: 12px;
+    }
+    .btn-link-2
+    {
+        
+    font-weight: 400;
+    color: #e9ecef;
+    white-space:normal;
+    }
+
+    #myVideo {
+position: relative;
+top: 0;
+right: 0;
+bottom: 0;
+min-width: 100%;
+max-height: 90%;
+}
+
+.awesome {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: #313131;
+  font-weight: 500;
+  animation: colorchange 20s infinite alternate;
+} 
+    @keyframes colorchange {    
+  0% {
+    color: #f1c40f;
+  }
+  10% {
+    color: #e0260d;
+  }
+  20% {
+    color: #85cc00;
+  }
+  30% {
+    color: #0020d3;
+  }
+  40% {
+    color: rgb(242, 3, 250);
+  }
+  50% {
+    color: #f1c40f;
+  }
+  60% {
+    color: #e0260d;
+  }
+  70% {
+    color: #85cc00;
+  }
+  80% {
+    color: #0020d3;
+  }
+  90% {
+    color: rgb(242, 3, 250);
+  }
+  100% {
+    color: #f1c40f;
+  }
+}
+
+affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 91vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: src("blink.mp4") black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.col {
+    width: 100px;
+    float: left;
+    border: 1px solid black;
+    padding: 5px;
+    /*flex-grow: 1;*/
+}
+@media (max-width: 400px) {
+    .wrapper {
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -moz-box-direction: reverse;
+        -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+}
+
+
+</style>
+<body data-spy="scroll" style="background-color: rgb(0, 0, 0);">
+  <header>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="blink.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      
+        <div class="d-flex text-center align-items-center">
+        <div class="w-100 text-white" style=" margin-top: 30px;">
+          <h1 class="display-3 awesome" style="color: antiquewhite;">Space Cats</h1>
+        </div>
+        </div>
+        <div class="d-flex text-center align-items-center">
+        <div class="w-100 text-white" style=" margin-top: 50vh;">
+            <p class="lead mb-0" style="color: dimgray; font-weight: 500;" style="color: #ffa500de;font-weight: 500;">A Cat:ility Coin</p>
+          </div>
+      </div>
+    </div>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="
+  animation-timing-function: ease-in; background-color: black;
+">
+    <a class="navbar-brand awesome" style="width: 0%; margin: 0;" href="#">Space Cats</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#howToBuy">How To Buy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#tokenomics">Tokenomics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#roadmap">Roadmap</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./whitepaper/SpaceCats-Whitepaper.pdf" target="_blank" rel="noopener noreferrer">whitepaper</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#faq">FAQs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutSC">About</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+  <div id='star'></div>
+  <div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+  <section class="index-about-sec" id="howToBuy" style="background: none;">
+    <!-- <div class="layer" style="padding-bottom: 0%;"> -->
+    <div class="container" style="color: #ffc107;">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12 mb-3" style="margin-top: 3em;">
+                <div class="text-center">
+                    <h4 class="h3 font-weight-bold animation animated fadeInUp awesome" data-animation="fadeInUp" data-animation-delay="0.2s" style="animation-delay: 0.2s; opacity: 1;">How To Buy Space Cats</h4>
+                    <p class="animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">Steps to seemlessly own your Space Cats<br/><span >[ 0x60972a277626689B221c698C5B55deC3e6aC278F ]</span></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6" style="padding-left: 0%; padding-right: 0%;">
+                <div class="row" data-aos="fade-up-right" data-aos-duration="500">
+                <ul>
+                        <li class="col-sm-12 col-lg-12">
+                        <div class="index-abt-content">
+                            <h3>Step 1:</h3>
+                            <h3>Install MetaMask For Chrome</h3>
+                            <p>Open your Google Chrome and visit <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer"><span class="s1">metamask.io</span></a>. Download the MetaMask chrome extension and set up a wallet. On mobile? Get MetaMask’s app for <a href="https://metamask.app.link/skAH3BaF99" target="_blank" rel="noopener">iPhone</a> or <a href="https://metamask.app.link/bxwkE8oF99" target="_blank" rel="noopener">Android</a>.</p>
+                        </div>
+                    </li>
+                    <br />
+                        <li class="col-sm-12 col-lg-12">
+                        <div class="index-abt-content">
+                            <h3>Step 2:</h3>
+                            <h3>Send $ETH To MetaMask</h3>
+                            <p>Transfer $ETH to your new MetaMask wallet from your existing wallet (e.g. Trust Wallet, Coinbase, or Binance), or buy $ETH directly within MetaMask. Make sure you add the token to your wallet. The token contract address is: <br><code>0x60972a277626689B221c698C5B55deC3e6aC278F</code></p>
+                        </div>
+                    </li>
+                    <br />
+                        <li class="col-sm-12 col-lg-12">
+                        <div class="index-abt-content">
+                            <h3>Step 3:</h3>
+                            <h3>Connect To Space Cats</h3>
+                            <p>The safest place to buy Space Cats is on <a href="https://app.uniswap.org/#/swap?outputCurrency=0x60972a277626689B221c698C5B55deC3e6aC278F&amp;use=V2" target="_blank" rel="noopener noreferrer">Uniswap</a>. Visit <a href="https://app.uniswap.org/#/swap?outputCurrency=0x60972a277626689B221c698C5B55deC3e6aC278F&amp;use=V2" target="_blank" rel="noopener noreferrer">Uniswap</a> and click “connect wallet” MetaMask will ask for your signature, go ahead and sign it.</p>
+                        </div>
+                    </li>
+                    <br />
+                        <li class="col-sm-12 col-lg-12">    
+                        <div class="index-abt-content">
+                            <h3>Step 4:</h3>
+                            <h3>Swap $ETH For Space Cats</h3>
+                            <p>Set your slippage to 3-4% or higher and enter and the amount of $ETH you would like to swap for Space Cats.</p>
+                        </div>
+                    </li>
+                    <br />
+                </ul>
+            </div>
+                <br />
+            </div>
+            <div class="col-lg-6">
+                <div class="row" data-aos="fade-up-left" data-aos-duration="1000">
+                <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center" style="position: relative;
+                width: 100%;
+                min-height: 1px;
+                /* padding-right: 15px; */
+                padding-left: 15px;">
+                    <h3 style="
+                    font-size: 20px;
+                    letter-spacing: -0.4px;
+                    line-height: 27px;
+                    font-weight: 600;
+                    color: #fff200;
+                    text-transform: uppercase;
+                    padding-right: 0px;
+                    margin-bottom: 0px;
+                ">Uniswap Interface</h3>
+                <br /><br />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center" style="position: relative;
+                width: 100%;
+                min-height: 1px;
+                /* padding-right: 15px; */
+                padding-left: 15px;">
+                <br />
+                    <p> Captain Pussy reporting!! Get onboard before we hit the <i> space.</i> Meaw!!<br /></p>
+                </div>
+                </div>
+                <br />
+                <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
+                    <iframe style="border: none;border-radius:12px;overflow: hidden;" scrolling="no" src="https://app.uniswap.org/#/swap?theme=dark&amp;use=v2&amp;slippage=4.00&amp;inputCurrency=ETH&amp;outputCurrency=0x60972a277626689B221c698C5B55deC3e6aC278F" width="500" height="700"></iframe>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+            <section id="parent-tokenomics">
+      <div class="container" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1000" data-aos-anchor="#parent-tokenomics" id="tokenomics">
+        &nbsp;<br /> &nbsp;
+        <hr style="background-color: blanchedalmond; border-top: 1px solid rgb(254 223 3)"/>
+          <br />
+        <div class="row">
+        <h5 class="awesome">TOKENOMICS</h5>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <br />
+                <p>There are a total of 1 quadrillion space cats token minted and this will never be changed. 53% of the total supply has been burned! and all the remaining tokens have been sent to the uniswap exchange. We believe in our community completely. Therefore, we have incorporated open market economics in the system leaving the entire price business in the hands of our community for a free market activity.
+            <br /> Note:  Games and other services utilized by staking spaccats shall incentivize hodlers.
+        </p>
+        </div>
+    </div>
+        <br />
+        <hr style="background-color: blanchedalmond; border-top: 1px solid rgb(254 223 3)"/>
+      </div>
+      </section> 
+    <section id="parent-roadmap" style="background-color: #000;">
+        <div id="roadmap">
+        <div class="container">
+            <br ><br >
+            <h5 class="awesome" data-aos="zoom-in" data-aos-anchor="#parent-roadmap" data-aos-offset="0" data-aos-duration="1000">ROAD MAP</h5>
+            <br />
+            <div class="wrapper row">
+                <div class="col col-sm-6 col-md-4 col-lg-6" style="text-align: left;">
+                    <h3 style="color: #fff200;">2021-Q4:</h3>
+                    <p>Website launch</p>
+                    <p>Listing on coingecko, coinmarketcap</p>
+                    <p>Developing community including telegram, twitter and instagram</p>
+                </div>
+                <div class="col col-sm-3 col-md-8 col-lg-6">
+                    <figure><img src="./spaccats/earth-rotates.gif" alt="Launching from Earth" style="max-width: 100%; height: 290px;"></figure>
+                </div>
+            </div>
+            <div class="wrapper row">
+                <div class="col col-sm-6 col-lg-6" style="text-align: left;">
+                    <figure><img src="./spaccats/moon.gif" alt="img-1" style="max-width: 100%; height: 240px;"></figure>
+                </div>
+                <div class="col col-sm-6 col-lg-6" style="text-align: left;">
+                    <h3 style="color: #fff200;">2022-Q1:</h3>
+                    <p>exchange listings</p>
+                    <p>NFT’s based on DAO’s</p>
+                    <p> Branded Merchandise</p>
+                    <p>Adding lottery platforms</p>
+                </div>
+            </div>
+            <div class="wrapper row">
+                <div class="col col-sm-6 col-lg-6" style="text-align: left;">
+                    <h3 style="color: #fff200;">2022-Q2:</h3>
+                    <p>Further exchanges listings and DAO's</p>
+                    <p>Tie-ups with big organizations worldwide</p>
+                    <p>Adding games & activities. Rewarding winners.
+                      </p>
+                </div>
+                <div class="col col-sm-6 col-lg-6">
+                    <figure><img src="./spaccats/mars.gif" alt="img-1" class="img-fluid"></figure>
+                </div>
+            </div>
+            <br />
+            
+            
+        </div>
+    </div>
+</section>
+
+<section id="parent-faq">
+    <div class="container" id="faq">
+        <br />
+      <hr style="background-color: blanchedalmond; border-top: 1px solid rgb(254 223 3)"/>
+        <br />
+      <div class="row">
+      <h5 data-aos="zoom-in" data-aos-anchor="#parent-faq" data-aos-offset="0" data-aos-duration="1000" class="awesome">FAQs</h5>
+      </div>
+      <br />
+      <div class="row">
+          <div class="col-md-12">
+            <div id="accordion" >
+                <div class="accordion-item card cardStyle">
+                  <h5 class="mb-0 card-header btn btn-link-2" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-align: left;">
+                    What is Space Cats?
+                </h5>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Space Cats is a peer to peer crypto utility token built on the latest ethereum technology. It has no prelaunch or ICO happenings to ensure fair distribution.
+                    </div>
+                  </div>
+                </div>
+                <div class="card cardStyle">
+                      <h5 class="mb-0 btn btn-link-2 collapsed card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="text-align: left;">
+                        Where can I hold Space Cats?
+                    </h5>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Any wallet which supports ERC-20 tokens will support Space Cats (viz. Trust Wallet, Coinbase, Metamask, etc).
+                    </div>
+                  </div>
+                </div>
+                <div class="card cardStyle">
+                      <h5 class="mb-0 card-header btn btn-link-2 collapsed" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="text-align: left;">
+                        What are gas fees and why do they vary so much?
+                      </h5>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Since Ethereum is decentralized, your transactions are processed by miners. Gas fees are payments made by users to compensate for the computing energy required to process and validate transactions on the Ethereum blockchain. If you know what you're doing, you can manually adjust the fee that you pay for the transaction - but be wary: if the miner fee is too low, miners can choose to ignore such transaction as the fee is not worth it and your transaction may get “stuck”. With the recent Ethereum upgradation to proof of stake from proof of work, we believe it sets the right platform and greatly diminishing energy consumption.
+                    </div>
+                  </div>
+                </div>
+                <div class="card cardStyle">
+                    <h5 class="mb-0 card-header btn btn-link-2 collapsed" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="text-align: left;">
+                        Is Space Cats on Binance Smart Chain (BSC)?
+                    </h5>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body">
+                    No, Space Cats is not on BSC. Be careful of counterfeits and clones. Please check our "How to buy?" section above.
+                  </div>
+                </div>
+              </div>
+              <div class="card cardStyle">
+                <h5 class="mb-0 card-header btn btn-link-2 collapsed" id="headingFive" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="text-align: left;">
+                    Why am I getting an error when trying to buy on Uniswap?
+                </h5>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                This is likely due to slippage. Click on the gear button in the top right of the window and try again after increasing the slippage percentage.
+              </div>
+            </div>
+          </div>
+              </div>
+          </div>
+      </div>
+      <br />
+      <hr id="parent-about" style="background-color: blanchedalmond; border-top: 1px solid rgb(254 223 3)"/>
+      <br />
+    </div>
+</section>
+
+<section>
+    <div class="index-services" style="background: url(./AboutCats1.jpeg) no-repeat; height: 100%; opacity: 1;   width: 100%;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+text-align: center;
+overflow: hidden;">
+<div class="container" id="aboutSC">
+<div class="layer" style="opacity:1">
+    <br />
+ <br />
+ &nbsp;&nbsp;
+ <br />
+    <div class="container" style="opacity: 0.8;">
+        <div class="row">
+        <h5 class="awesome" data-aos="zoom-in" data-aos-anchor="#parent-about" data-aos-offset="0" data-aos-duration="1000"><span style="background-color: rgb(16, 9, 41); font-size: 40px;">About Space Cats</span></h5>
+        <br /><br /> <br /><br />
+        <p style="color: #fff200; font-size: 20px;">Space Cats is a utility token. With the NFT space booming, we will be acquire the popular cat NFT's. Watch out for games and fun activities launching in accordance to the roadmap. For further details, please refer to the whitepaper.<br/> <br/>Spaccats is centered based on the curious Felidae family. We like dogs but we think cats are cooler. <br/>Some fun facts are listed below:</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6" style="text-align: justify; color: #fff200;">
+            <p>
+                <ol>
+                    <li>🐾 As early as 3000 B.C.E, felines were worshipped as deities. The Egyptian goddesses Bastet & Sekhmet. There’s also Dawon - Hindu sacred Tigress, Barong Ket - Balinese “king of spirits”, and an entire pantheon of Jaguar Gods of pre-columbian era.</li><br />
+                <li>🐾 Cats have around 300 million neurons compared to a dogs with 160 million neurons</li><br />
+                <li>🐾 They’re good predators and have a sharp sense of intuition.</li><br />
+            
+        </p>
+        </div>
+        <div class="col-md-6" style="text-align: justify; color: #fff200;">
+        <p>
+        <li>🐾 Most of them are relatively quiet, smart and they keep themselves very clean. Some cats can even use the toilet!</li><br />
+        <li>🐾 They occupy less space, can clean themselves, don’t require you to walk them and can pretty much take care of themselves. You only have to feed them just once a day.</li><br />
+        <li>🐾 The highest number of pets owned in America, Canada, Russia and many Asian and European countries are cats!
+             <br />You can find the statistics <a href="https://www.petsecure.com.au/pet-care/a-guide-to-worldwide-pet-ownership/" target="_blank" rel="noopener noreferrer" onMouseOver="this.style.color='#0F0';" onmouseleave="this.style.color='#fff'">here.</a>
+           </li>
+        </ol>
+    </p>
+        </div>
+    </div>
+    <div class="row">
+        <p style="text-align: justify; color: #fff200;">The above facts are about the felis family(house cats). Let us not get into the details about the big ones. Clearly, you know who the ‘king of the jungle’ is.</p>
+        <br />
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+    
+</section>
+
+    <section>
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #000; height: 100px;">
+<div class="container">
+  <div class="row">
+    <h6 style="color: rgba(255,255,255,.5); font-size: 16px; margin-top: 20px;">©2021, All Rights Reserved.</h6>
+  </div>
+  <div class="row">
+    <ul class="navbar-nav ml-auto" style="margin-top: 20px; display: -webkit-inline-box;">
+      <li class="nav-item">
+        <a class="nav-link" href="#howToBuy">&nbsp;How To Buy &nbsp;</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://t.me/joinchat/UVp2NgrrBNY5MTVl" target="_blank" rel="noopener noreferrer">&nbsp;Telegram&nbsp;</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://twitter.com/SpaceCa96034190" target="_blank" rel="noopener noreferrer">&nbsp;Twitter&nbsp;</a>
+      </li>
+    </ul>
+</div>
+</div>
+  </nav>
+</section>
+<div class="container">
+<button class="scrolltop-btn">
+    <i class="fa fa-angle-up"></i>
+</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script>
+
+</body>
+
+</html>
